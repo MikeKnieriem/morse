@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import logo from './logo.svg';
 
 import * as moment from "moment";
+import {morseToText} from "./utils/morseCodeConverter";
 
 interface IState {
   message: string,
@@ -62,6 +63,7 @@ class App extends React.Component<{}, IState> {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="message">{message}</p>
+        <p className="message">{morseToText(message)}</p>
         <Button variant="contained" color="primary" onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp}>Tap</Button>
         <Button variant="contained" color="secondary" onClick={this.handleClear}>Clear</Button>
       </div>
