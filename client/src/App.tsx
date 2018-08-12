@@ -3,7 +3,6 @@ import './App.css';
 import { TAP_LENGTH } from './constants';
 
 import Button from "@material-ui/core/Button";
-import logo from './logo.svg';
 
 import * as moment from "moment";
 import {morseToText} from "./utils/morseCodeConverter";
@@ -59,8 +58,7 @@ class App extends React.Component<{}, IState> {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Morse Code</h1>
         </header>
         <p className="message">{message}</p>
         <p className="message">{morseToText(message)}</p>
